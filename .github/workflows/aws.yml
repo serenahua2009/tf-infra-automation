@@ -6,8 +6,8 @@ on:
 
 env:
   AWS_REGION: "ap-south-1"
-  AWS_ACCESS_KEY: "AKIAWYPXMNSEAGN6M75Y"
-  AWS_SECRET_KEY: "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"
+  AWS_ACCESS_KEY: "AKIAWYPXMNSELH6572H7"
+  AWS_SECRET_KEY: "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"
   IMAGE_TAG: "latest"
   ECR_REPOSITORY: "tf-automation-repo"
   TASK_DEFINITON: task-definition.json
