@@ -31,7 +31,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::464912149640:role/Github
-          role-session-name: Github
+          # role-session-name: Github
+          audience: sts.amazonaws.com
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Login to Amazon Ecr
