@@ -6,8 +6,8 @@ on:
 
 env:
   AWS_REGION: "ap-south-1"
-  # AWS_ACCESS_KEY: "AKIAWYPXMNSELH6572H7"
-  # AWS_SECRET_KEY: "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"
+  AWS_ACCESS_KEY: "AKIAWYPXMNSELH6572H7"
+  AWS_SECRET_KEY: "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"
   IMAGE_TAG: "latest"
   ECR_REPOSITORY: "tf-automation-repo"
   TASK_DEFINITON: task-definition.json
@@ -30,13 +30,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::464912149640:role/Github
           role-session-name: Github
           aws-region: ${{ env.AWS_REGION }}
-          # aws-access-key-id: ${{ env.AWS_ACCESS_KEY }}
-          # aws-secret-access-key: ${{ env.AWS_ACCESS_KEY }}
+          aws-access-key-id: ${{ env.AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ env.AWS_ACCESS_KEY }}
 
       - name: Login to Amazon Ecr
         id: login-ecr
