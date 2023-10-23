@@ -6,6 +6,8 @@ on:
 
 env:
   AWS_REGION: "ap-south-1"
+  AWS_ACCESS_KEY: "AKIAWYPXMNSEAGN6M75Y"
+  AWS_SECRET_KEY: "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"
   IMAGE_TAG: "latest"
   ECR_REPOSITORY: "tf-automation-repo"
   TASK_DEFINITON: task-definition.json
@@ -33,6 +35,8 @@ jobs:
           role-to-assume: arn:aws:iam::464912149640:role/Github
           role-session-name: Github
           aws-region: ${{ env.AWS_REGION }}
+          aws-access-key-id: ${{ env.AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ env.AWS_ACCESS_KEY }}
 
       - name: Login to Amazon Ecr
         id: login-ecr
